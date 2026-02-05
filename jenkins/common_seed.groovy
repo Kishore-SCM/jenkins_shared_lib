@@ -1,4 +1,4 @@
-def baseUrl = "https://github.com/ybmadhu/"
+def baseUrl = "https://github.com/Kishore-SCM/"
 def repoName = "$reponame"
 def gitRepoUrl= baseUrl + repoName + '.git'
 def jobName = "$reponame"
@@ -22,7 +22,7 @@ def jobName = "$reponame"
                     git {
                         remote {
                             url(gitRepoUrl)
-                            credentials('git_credentials')
+                            credentials('git_cred')
                         }
                         branches('master')
                         extensions {
