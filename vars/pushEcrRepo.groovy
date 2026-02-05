@@ -12,6 +12,14 @@ pipeline {
         ECRCRED = 'ecr:ap-south-1:aws_cred'
     }
     stages {
+       stage("clone code") {
+            steps {
+                script {
+                    // Let's clone the source
+                    git credentialsId: 'git_cred', url: 'https://github.com/Kishore-SCM/spring3-mvc-maven-xml-hello-world.git'
+                }
+            }
+        }
          stage('Image Build'){
              steps{
                  script{
